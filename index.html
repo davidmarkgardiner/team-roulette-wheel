@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Roulette Wheel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Team Roulette Wheel</h1>
+        
+        <div class="wheel-container">
+            <div class="wheel" id="wheel">
+                <!-- Team members will be added here dynamically -->
+            </div>
+            <div class="pointer"></div>
+        </div>
+
+        <div class="controls">
+            <button id="spin-btn">Spin The Wheel</button>
+        </div>
+
+        <div class="team-management">
+            <h2>Team Members</h2>
+            <div class="team-input">
+                <input type="text" id="member-name" placeholder="Enter team member name">
+                <button id="add-member">Add Member</button>
+            </div>
+            <ul id="team-list">
+                <!-- Team members list will be displayed here -->
+            </ul>
+        </div>
+
+        <div class="result" id="result">
+            <h2>Selected Member:</h2>
+            <p id="selected-member"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
