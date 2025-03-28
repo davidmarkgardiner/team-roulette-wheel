@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.wheel-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto 30px;
+}
+
+.wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.wheel-section {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 0;
+    transform-origin: 50% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.wheel-section span {
+    transform: rotate(90deg);
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.pointer {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid #ff4757;
+    z-index: 10;
+}
+
+.controls {
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1e6ec1;
+}
+
+#spin-btn {
+    font-size: 18px;
+    padding: 12px 30px;
+    background-color: #ff4757;
+}
+
+#spin-btn:hover {
+    background-color: #ee3448;
+}
+
+.team-management {
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.team-management h2 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.team-input {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.team-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+}
+
+.team-input button {
+    border-radius: 0 5px 5px 0;
+}
+
+#team-list {
+    list-style-type: none;
+}
+
+#team-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#team-list li button {
+    background-color: #ff4757;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+#team-list li button:hover {
+    background-color: #ee3448;
+}
+
+.result {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.result h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#selected-member {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e86de;
+}
+
+@media (max-width: 600px) {
+    .wheel-container {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .wheel-section span {
+        width: 100px;
+    }
+}
