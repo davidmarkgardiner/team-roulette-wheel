@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: team-roulette-wheel
+  labels:
+    app: team-roulette-wheel
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: team-roulette-wheel
+  template:
+    metadata:
+      labels:
+        app: team-roulette-wheel
+    spec:
+      containers:
+      - name: team-roulette-wheel
+        image: ${YOUR_CONTAINER_REGISTRY}/team-roulette-wheel:latest
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 200m
+            memory: 256Mi
